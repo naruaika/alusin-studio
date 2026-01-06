@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.macipra.alusin
+Exec=@bindir@/alusin-studio --gapplication-service

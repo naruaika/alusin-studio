@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Alusin Studio
+Exec=alusin-studio
+Icon=com.macipra.alusin
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=image editor;photo editor;
+StartupNotify=true
+DBusActivatable=true

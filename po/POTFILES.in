@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.macipra.alusin.desktop.in
+data/com.macipra.alusin.metainfo.xml.in
+data/com.macipra.alusin.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
