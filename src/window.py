@@ -262,12 +262,8 @@ class Window(Adw.ApplicationWindow):
 
     def _stop_inertia_tick(self) -> None:
         """"""
-        v_adjustment = self.v_scrollbar.get_adjustment()
-        v_adjustment.set_value(0)
-
         self._inertia_speed = 0.0
         self._inertia_tick_id = 0
-
         return Gdk.EVENT_PROPAGATE
 
     def load_images_worker(self,
