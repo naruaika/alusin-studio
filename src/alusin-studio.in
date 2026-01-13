@@ -38,8 +38,9 @@ gettext.install('alusin-studio', localedir)
 if __name__ == '__main__':
     import gi
 
-    gi.require_version('Gtk', '4.0')
     gi.require_version('Adw', '1')
+    gi.require_version('GdkPixbuf', '2.0')
+    gi.require_version('Gtk', '4.0')
 
     from gi.repository import Gio
     resource_path = os.path.join(pkgdatadir, 'alusin-studio.gresource')

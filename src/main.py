@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gio
+from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gtk
 import sys
@@ -27,6 +28,12 @@ from .window import Window
 
 class Application(Adw.Application):
     """The main application singleton class."""
+
+    # TODO: delete too-old image thumbnails
+
+    # TODO: add support for more image formats
+
+    # TODO: improve thumbnail generation speed
 
     def __init__(self) -> None:
         """"""
@@ -38,6 +45,9 @@ class Application(Adw.Application):
                                     ['<Primary>q'])
         self.create_action('about', self._on_about_action,
                                     ['F12'])
+
+        from .canvas import Canvas
+        GObject.type_register(Canvas)
 
     def do_activate(self) -> None:
         """"""

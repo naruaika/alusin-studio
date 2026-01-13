@@ -6,15 +6,16 @@
     <property name="title" translatable="yes">Alusin Studio</property>
     <property name="width-request">362</property>
     <property name="height-request">362</property>
-    <property name="default-width">1440</property>
-    <property name="default-height">900</property>
+    <property name="default-width">1200</property>
+    <property name="default-height">800</property>
     <property name="content">
       <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar">
+            <property name="show-title">false</property>
             <child type="end">
               <object class="GtkMenuButton">
-                <property name="primary">True</property>
+                <property name="primary">true</property>
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="tooltip-text" translatable="yes">Main Menu</property>
                 <property name="menu-model">primary_menu</property>
@@ -23,11 +24,22 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkLabel" id="label">
-            <property name="label" translatable="yes">Hello, World!</property>
-            <style>
-              <class name="title-1"/>
-            </style>
+          <object class="GtkOverlay">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <child>
+              <object class="Canvas" id="main_canvas"/>
+            </child>
+            <child type="overlay">
+              <object class="GtkScrollbar" id="v_scrollbar">
+                <property name="orientation">vertical</property>
+                <property name="halign">end</property>
+                <style>
+                  <class name="right"/>
+                  <class name="overlay-indicator"/>
+                </style>
+              </object>
+            </child>
           </object>
         </property>
       </object>

@@ -36,6 +36,7 @@ sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'canvas.py',
 ]
 
 install_data(sources, install_dir: moduledir)

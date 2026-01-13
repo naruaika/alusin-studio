@@ -2,5 +2,8 @@
 <gresources>
   <gresource prefix="/com/macipra/alusin">
     <file preprocess="xml-stripblanks">window.ui</file>
+    <file preprocess="xml-stripblanks">canvas.ui</file>
+    <file>style.css</file>
+    <file>style-dark.css</file>
   </gresource>
 </gresources>
